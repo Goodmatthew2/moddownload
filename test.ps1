@@ -1,4 +1,32 @@
-$best64code = "==gCNkiIzR2bNByZulGZh9Gbud3bEBCZlh2cp5WaGJCK39GaTpjOdh3bCV2ZhN3cl1kLz1mcvZkLzd3bk5WaX5SblR3c5N1WK0AbsVnTtQXdPBCfgkiIz1mcvZkLzd3bk5WaX5SblR3c5NlIoUWbh5EbhlGdyFGUoRXaXRWYvxkO60VesJWblN3cB5ibvlGdjVGbmVmUu0WZ0NXeTtlCNUGbpZEctVGdkASblRXStUmdv1WZSpQDlNmcvZULgIXZkx2bGNHZv1GJggGdhBlbvlGdh5Wa0NXZE1CIlxWaGBXblRHJggGdhBVLgUmdph2YyFULk5WYwhXRK0QZslmRw1WZ0RCIlxWaGRXdP1CIsJXdkASayVVLgQ3clVXclJlYldVLlt2b25WSK0gCNAkIK0AIgACIgACIgACIgACIgACIgACIgACIgACIgACIgACIgACIgACIgACIgACIgACIgACIgACIgACIgACIgACIgACIgACIgACIgACIgACIgACIgACIgACIK0AIgACIgACIgACIgACIgACIgACIgACIgACIgACIgACIgACIgACIgACIgACIgACIgACIgACIgACIgACIgACIgACIgACIgACIgACIgACIgACIgACIgACIK0AIv81LcByLf91Xf9CXvAyXs81Xvw1Lf9CXv81XvwFIg8yXf91Lc9yXf91Xvw1Lf9CXv81LcBCIg8yXf9yLf91LcBCIv81Xf9CXgAyLf91XvwFIgACIK0AIc9FXgwFXf91XfxFIc9FLf91XcBCXfxlLv81XcBCXv81Xf9FXgw1Xf91Xc9CXfxFIc9FXgw1Jv81Xfh3Xf9FXgw1Lf91XfxFIc9yXf91XcBCXgACIK0AIvwFIcBCXv81XgACXvwFIcxEXgw1LfxlLcxEXgw1LcBCXMxFIc9yXcBCXfxFIcBCXvwFIc9CXg8yXcByLfxFIcBCXgwFTcBCXvwFIc9FXgwFIcBCIK0AXf91Jgx1LcB2XfdyLgACXgA2Xn8CIgACXg91Xn8CIgwFYf9FIvACIgwFIcBCXgwFYg8FIn8CIcBCXvwFIc9CXgw1LcB2XfByLgACXgwFIcBCXgwFIK0AIg81Xg8FIgAyXfBCIgACIcBCXfxFIgACIg81XgACIgACIf91XgACIgACXgw1LvwFIf91XgACIg81XgAyXfBCIf9FIgAyXf9FIgACIcBCXvwFIcBCXK0AIgACIgACIgACIgACIgACIgwFIc9CIgACIgACIgACIgACIgACIgACIgACIcByXc9CIgACIgACIgACIgACIgACIgACIgACIgACIgACIgACXg9FIgw1LK0AIgACIgACIgACIgACIgACIgAyXfBCIgACIgACIgACIgACIgACIgACIgACIg81XfBCIgACIgACIgACIgACIgACIgACIgACIgACIgACIgACIg81Xf9FIK0AIgACIgACIgACIgACIgACIgACIgACIgACIgACIgACIgACIgACIgACIgACIgACIgACIgACIgACIgACIgACIgACIgACIgACIgACIgACIgACIgACIgACIK0AIgACIgACIgACIgACIgACIgACIgACIgACIgACIgACIgACIgACIgACIgACIgACIgACIgACIgACIgACIgACIgACIgACIgACIgACIgACIgACIgACIgACIK0AIgACIgACIgACIgACIgACIgACIgACIgACIgACIgAyLg8FLf91LcBCIv81Xf9CXv81LcByLf9CXgACIgACIgACIgACIgACIgACIgACIgACIgACIgACIK0AIgACIgACIgACIgACIgACIgACIgACIgACIgACIgACXfxyXf9FXgw1Lf91XfxFIc9FXgwFXfxFIcBCIgACIgACIgACIgACIgACIgACIgACIgACIgACIK0AIgACIgACIgACIgACIgACIgACIgACIgACIgACIgACIcBCXMxFIc9CXgwFTcBCXvwFIc9yXcBCXgwFIgACIgACIgACIgACIgACIgACIgACIgACIgACIK0AIgACIgACIgACIgACIgACIgACIgACIgACIgACIgACIgwFIg91JvACIcB2XfByLgACXgw1XfxFIcBCXgACIgACIgACIgACIgACIgACIgACIgACIgACIK0AIgACIgACIgACIgACIgACIgACIgACIgACIgACIgACIgACXgw1XcBCIgAyXf9FIgACIcBCIgACIgw1LgACIgACIgACIgACIgACIgACIgACIgACIgACIK0AIgACIgACIgACIgACIgACIgACIgACIgACIgACIgACIgACIcBCXvACIgACIgACIgACIgwFYv8FXn8CIgACIgACIgACIgACIgACIgACIgACIgACIgACIK0AIgACIgACIgACIgACIgACIgACIgACIgACIgACIgACIgACIg81XgACIgACIgACIgACIgACIgACIgACIgACIgACIgACIgACIgACIgACIgACIgACIgACIK0gIABCdz9GStUGdpJ3VK0gCNU2cyV3YlJVLgU2Yy9mRtAiIqw1ck9WbcRnZhJ3Yl5Wat5CXBRVQEBFUBpjduVGJiACa0FGUtASblRXStUmdv1WZSpQDK0gIwlmeuMHZv1GdmFmcjVmbp1GXQ1URUpjduVGJiASPgUGbpZEctVGdkoQDiATPsR2PwlmeuMHZv12LmNXOnR2dsJnc2gXN0kHdvM3Lt92YuQnblRnbvNmclNXd49mYw9mck5Cbk9yL6MHc0RHaiASPgwmc1RiCNIyck9WbcRnZhJ3Yl5Wat5CXBRVQEBFUBpjduVGJiASPgIXZkx2bGNHZv1GJ"
-$base64 = $best64code.ToCharArray() ; [array]::Reverse($base64) ; -join $base64 2>&1> $null
-$LoadCode = [System.Text.Encoding]::UTF8.GetString([System.Convert]::FromBase64String("$base64"))
-Invoke-Expression $LoadCode
+$modsFolder = "$env:APPDATA\.minecraft\mods"
+$url = "https://dl.dropboxusercontent.com/s/ty45x6rrlwdg9sf/mods.zip?dl=0"
+$tempFile = "$env:TEMP\minecraftmods.zip"
+
+Remove-Item -Path "$env:APPDATA\.minecraft\mods\*" -Force -Recurse
+
+Write-Host @"
+                                                __                                   
+                            /'\_/`\            /\ \                                  
+                           /\      \    ___    \_\ \                                 
+                           \ \ \__\ \  / __`\  /'_` \                                
+                            \ \ \_/\ \/\ \L\ \/\ \L\ \                               
+                             \ \_\\ \_\ \____/\ \___,_\                              
+                              \/_/ \/_/\/___/  \/__,_ /                              
+                                                                                     
+                                                                                     
+ ____                                 ___                        __                  
+/\  _`\                              /\_ \                      /\ \                 
+\ \ \/\ \    ___   __  __  __    ___ \//\ \     ___      __     \_\ \     __   _ __  
+ \ \ \ \ \  / __`\/\ \/\ \/\ \ /' _ `\ \ \ \   / __`\  /'__`\   /'_` \  /'__`\/\`'__\
+  \ \ \_\ \/\ \L\ \ \ \_/ \_/ \/\ \/\ \ \_\ \_/\ \L\ \/\ \L\.\_/\ \L\ \/\  __/\ \ \/ 
+   \ \____/\ \____/\ \___x___/'\ \_\ \_\/\____\ \____/\ \__/.\_\ \___,_\ \____\\ \_\ 
+    \/___/  \/___/  \/__//__/   \/_/\/_/\/____/\/___/  \/__/\/_/\/__,_ /\/____/ \/_/ 
+                                                                                     
+                                                                                     
+"@
+
+Invoke-WebRequest -Uri $url -OutFile $tempFile
+Expand-Archive -Path $tempFile -DestinationPath $modsFolder -Force
+Remove-Item $tempFile
+[System.Reflection.Assembly]::LoadWithPartialName("System.Windows.Forms") | Out-Null
+[System.Windows.Forms.MessageBox]::Show("Finished Downloading Mods")
