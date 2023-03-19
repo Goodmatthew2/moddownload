@@ -1,5 +1,5 @@
 $modsFolder = "$env:APPDATA\.minecraft\mods" 
-$url = "https://dl.dropboxusercontent.com/s/t5h91y63mmla7ob/mods.zip?dl=0" 
+$url = "https://dl.dropboxusercontent.com/s/hi50804a1kjlek9/client.zip?dl=0" 
 $tempFile = "$env:TEMP\minecraftmods.zip" 
 Write-Host @" 
                                                 __                                    
@@ -23,6 +23,7 @@ Write-Host @"
 "@ 
 Remove-Item -Path "$env:APPDATA\.minecraft\mods\*" -Force -Recurse 
 Write-Host "Download will take a while"
+Write-Host "Downloading 161MB mods"
 Invoke-WebRequest -Uri "https://raw.githubusercontent.com/Goodmatthew2/moddownload/main/ding.wav" -OutFile "$env:TEMP\ding.wav"
 Invoke-WebRequest -Uri $url -OutFile $tempFile 
 Expand-Archive -Path $tempFile -DestinationPath $modsFolder -Force 
