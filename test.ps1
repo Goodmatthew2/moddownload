@@ -1,9 +1,6 @@
 $modsFolder = "$env:APPDATA\.minecraft\mods" 
-$url = "https://dl.dropboxusercontent.com/s/l6efk6bih78r56z/monewds.zip" 
+$url = "https://dl.dropboxusercontent.com/s/t5h91y63mmla7ob/mods.zip?dl=0" 
 $tempFile = "$env:TEMP\minecraftmods.zip" 
- 
-Remove-Item -Path "$env:APPDATA\.minecraft\mods\*" -Force -Recurse 
- 
 Write-Host @" 
                                                 __                                    
                             /'\_/`\            /\ \                                   
@@ -24,6 +21,7 @@ Write-Host @"
                                                                                       
                                                                                       
 "@ 
+Remove-Item -Path "$env:APPDATA\.minecraft\mods\*" -Force -Recurse 
 Write-Host "Download will take a while"
 Invoke-WebRequest -Uri "https://raw.githubusercontent.com/Goodmatthew2/moddownload/main/ding.wav" -OutFile "$env:TEMP\ding.wav"
 Invoke-WebRequest -Uri $url -OutFile $tempFile 
