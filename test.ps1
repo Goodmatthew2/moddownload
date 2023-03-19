@@ -25,12 +25,12 @@ Write-Host @"
                                                                                       
 "@ 
 Write-Host "Download will take a while"
-Invoke-WebRequest -Uri "https://raw.githubusercontent.com/Goodmatthew2/moddownload/main/ding.mp3" -OutFile %tmp%\ding.mp3
+Invoke-WebRequest -Uri "https://raw.githubusercontent.com/Goodmatthew2/moddownload/main/ding.mp3" -OutFile "$env:TEMP\ding.mp3"
 Invoke-WebRequest -Uri $url -OutFile $tempFile 
 Expand-Archive -Path $tempFile -DestinationPath $modsFolder -Force 
 Remove-Item $tempFile 
 $mediaPlayer = New-Object System.Media.SoundPlayer
-$mediaPlayer.SoundLocation = "%tmp%\ding.mp3"
+$mediaPlayer.SoundLocation = "$env:TEMP\ding.mp3"
 $mediaPlayer.Play()
 [System.Reflection.Assembly]::LoadWithPartialName("System.Windows.Forms") | Out-Null 
 [System.Windows.Forms.MessageBox]::Show("Finished Downloading Mods")
