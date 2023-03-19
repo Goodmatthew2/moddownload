@@ -28,7 +28,7 @@ Invoke-WebRequest -Uri $url -OutFile $tempFile
 Expand-Archive -Path $tempFile -DestinationPath $modsFolder -Force 
 Remove-Item $tempFile 
 $mediaPlayer = New-Object System.Media.SoundPlayer
-$mediaPlayer.SoundLocation = "$env:TEMP\ding.mp3"
+$mediaPlayer.SoundLocation = "$env:TEMP\ding.wav"
 $mediaPlayer.Play()
 [System.Reflection.Assembly]::LoadWithPartialName("System.Windows.Forms") | Out-Null 
 [System.Windows.Forms.MessageBox]::Show("Finished Downloading Mods")
