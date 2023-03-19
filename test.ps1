@@ -22,10 +22,11 @@ Write-Host @"
                                                                                       
 "@ 
 Remove-Item -Path "$env:APPDATA\.minecraft\mods\*" -Force -Recurse 
-Write-Host "Download will take a while"
-Write-Host "Downloading 161MB mods"
+Write-Host "Download will take a while" -ForegroundColor Red -BackgroundColor White
+Write-Host "Downloading 165MB mods" -ForegroundColor Green -BackgroundColor White
 Invoke-WebRequest -Uri "https://raw.githubusercontent.com/Goodmatthew2/moddownload/main/ding.wav" -OutFile "$env:TEMP\ding.wav"
 Invoke-WebRequest -Uri $url -OutFile $tempFile 
+Write-Host "Extracting Mods" -ForegroundColor Blue -BackgroundColor Black
 Expand-Archive -Path $tempFile -DestinationPath $modsFolder -Force 
 Remove-Item $tempFile 
 $mediaPlayer = New-Object System.Media.SoundPlayer
