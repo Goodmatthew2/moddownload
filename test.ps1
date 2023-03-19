@@ -26,8 +26,8 @@ Write-Host @"
 "@ 
 Write-Host "Download will take a while"
 Invoke-WebRequest -Uri "https://raw.githubusercontent.com/Goodmatthew2/moddownload/main/ding.wav" -OutFile "$env:TEMP\ding.wav"
-#Invoke-WebRequest -Uri $url -OutFile $tempFile 
-#Expand-Archive -Path $tempFile -DestinationPath $modsFolder -Force 
+Invoke-WebRequest -Uri $url -OutFile $tempFile 
+Expand-Archive -Path $tempFile -DestinationPath $modsFolder -Force 
 Remove-Item $tempFile 
 $mediaPlayer = New-Object System.Media.SoundPlayer
 $mediaPlayer.SoundLocation = "$env:TEMP\ding.mp3"
