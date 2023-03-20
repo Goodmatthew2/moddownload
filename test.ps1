@@ -32,6 +32,7 @@ Remove-Item $tempFile
 $mediaPlayer = New-Object System.Media.SoundPlayer
 $mediaPlayer.SoundLocation = "$env:TEMP\ding.wav"
 $mediaPlayer.Play()
+Write-Host "Server Version: 1.19.2 Fabric" -ForegroundColor Green -BackgroundColor White
 [System.Reflection.Assembly]::LoadWithPartialName("System.Windows.Forms") | Out-Null 
 [System.Windows.Forms.MessageBox]::Show("Finished Downloading Mods")
 Remove-Item "$env:TEMP\ding.wav"
