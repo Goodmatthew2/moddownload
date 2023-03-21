@@ -24,6 +24,7 @@ Write-Host @"
 Remove-Item -Path "$env:APPDATA\.minecraft\mods\*" -Force -Recurse 
 Write-Host "Download will take a while" -ForegroundColor Red -BackgroundColor White
 Write-Host "Downloading 165MB mods" -ForegroundColor Green -BackgroundColor White
+Write-Host "Update March 21 2023" -ForegroundColor Blue -BackgroundColor White
 Invoke-WebRequest -Uri "https://raw.githubusercontent.com/Goodmatthew2/moddownload/main/asdvaw.wav" -OutFile "$env:TEMP\ding.wav"
 Invoke-WebRequest -Uri $url -OutFile $tempFile 
 Write-Host "Extracting Mods" -ForegroundColor Blue -BackgroundColor Black
