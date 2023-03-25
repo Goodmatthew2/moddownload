@@ -1,5 +1,5 @@
 $modsFolder = "$env:APPDATA\.minecraft\mods" 
-$url = "https://dl.dropboxusercontent.com/s/9p1qd1xdezgukt0/Clnt.zip?dl=0" 
+$url = "https://dl.dropboxusercontent.com/s/b99g2l7bxqziz7r/mods.zip?dl=0" 
 $tempFile = "$env:TEMP\minecraftmods.zip" 
 Write-Host @"
                                                 __                                    
