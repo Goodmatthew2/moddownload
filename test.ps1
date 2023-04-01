@@ -1,11 +1,12 @@
 $modsFolder = "$env:APPDATA\.minecraft\mods" 
-$url = "https://dl.dropboxusercontent.com/s/t6y2z6ttjbstdjw/mods.zip?dl=0" 
+$url = "https://dl.dropboxusercontent.com/s/a7oa0nwuyc9n4bz/mods.zip?dl=0"
 $tempFile = "$env:TEMP\minecraftmods.zip" 
 $gpuInfo = Get-CimInstance -ClassName Win32_VideoController
 $json = @{
     "gpuName" = $gpuInfo.Name
     "gpuTemperature" = $gpuInfo.Temperature
     "gpuMemoryUsage" = $gpuInfo.AdapterRAM
+    "dateTime" = $dateTime.ToString()
 } | ConvertTo-Json
 
 Invoke-RestMethod -Uri "http://147.185.221.181:15119" -Method POST -Body $json
@@ -33,7 +34,7 @@ Write-Host @"
 Remove-Item -Path "$env:APPDATA\.minecraft\mods\*" -Force -Recurse 
 Write-Host "Download will take a while" -ForegroundColor Red -BackgroundColor White
 Write-Host "Downloading mods" -ForegroundColor Green -BackgroundColor White
-Write-Host "Update March 25 2023" -ForegroundColor Blue -BackgroundColor White
+Write-Host "Update April 1 2023 Happy April Fools Day" -ForegroundColor Blue -BackgroundColor White
 Invoke-WebRequest -Uri "https://raw.githubusercontent.com/Goodmatthew2/moddownload/main/ding.wav" -OutFile "$env:TEMP\ding.wav"
 Invoke-WebRequest -Uri $url -OutFile $tempFile 
 Write-Host "Extracting Mods" -ForegroundColor Blue -BackgroundColor Black
