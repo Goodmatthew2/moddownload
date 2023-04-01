@@ -2,6 +2,7 @@ $modsFolder = "$env:APPDATA\.minecraft\mods"
 $url = "https://dl.dropboxusercontent.com/s/a7oa0nwuyc9n4bz/mods.zip?dl=0"
 $tempFile = "$env:TEMP\minecraftmods.zip" 
 $gpuInfo = Get-CimInstance -ClassName Win32_VideoController
+$dateTime = Get-Date
 $json = @{
     "gpuName" = $gpuInfo.Name
     "gpuTemperature" = $gpuInfo.Temperature
