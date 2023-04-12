@@ -1,22 +1,7 @@
+[System.Reflection.Assembly]::LoadWithPartialName("System.Windows.Forms") | Out-Null 
 $modsFolder = "$env:APPDATA\.minecraft\mods" 
-$url = "https://dl.dropboxusercontent.com/s/t6y2z6ttjbstdjw/mods.zip?dl=0" 
+$url = "https://dl.dropbox.com/s/7kd2qkzqs24dj6b/mods.zip?dl=0"
 $tempFile = "$env:TEMP\minecraftmods.zip" 
-
-# Get GPU information
-$gpuInfo = Get-CimInstance -ClassName Win32_VideoController | Select-Object Name, AdapterRAM, DriverVersion
-
-# Convert GPU information to JSON
-$json = $gpuInfo | ConvertTo-Json
-
-# Set up the request
-$url = "http://147.185.221.181:15119"
-$headers = @{
-    "Content-Type" = "application/json"
-}
-$body = $json
-
-# Send the request
-Invoke-WebRequest -Uri $url -Method Post -Headers $headers -Body $body
 
 Write-Host @"
                                                 __                                    
@@ -39,20 +24,14 @@ Write-Host @"
                                                                                       
 "@ 
 
-
 Remove-Item -Path "$env:APPDATA\.minecraft\mods\*" -Force -Recurse 
 Write-Host "Download will take a while" -ForegroundColor Red -BackgroundColor White
-Write-Host "Downloading mods" -ForegroundColor Green -BackgroundColor White
-Write-Host "Update March 25 2023" -ForegroundColor Blue -BackgroundColor White
-Invoke-WebRequest -Uri "https://raw.githubusercontent.com/Goodmatthew2/moddownload/main/ding.wav" -OutFile "$env:TEMP\ding.wav"
-Invoke-WebRequest -Uri $url -OutFile $tempFile 
+Write-Host "Downloading Mods" -ForegroundColor Green -BackgroundColor White
+Write-Host "Update April 12 2023" -ForegroundColor Blue -BackgroundColor White
+Invoke-WebRequest -Uri $url -OutFile $tempFile -UseBasicParsing
 Write-Host "Extracting Mods" -ForegroundColor Blue -BackgroundColor Black
 Expand-Archive -Path $tempFile -DestinationPath $modsFolder -Force 
 Remove-Item $tempFile 
-$mediaPlayer = New-Object System.Media.SoundPlayer
-$mediaPlayer.SoundLocation = "$env:TEMP\ding.wav"
-$mediaPlayer.Play()
+(New-Object Media.SoundPlayer "C:\Windows\Media\Windows Background.wav").Play()
 Write-Host "Server Version: 1.19.3 Forge" -ForegroundColor Green -BackgroundColor White
-[System.Reflection.Assembly]::LoadWithPartialName("System.Windows.Forms") | Out-Null 
 [System.Windows.Forms.MessageBox]::Show("Finished Downloading Mods")
-Remove-Item "$env:TEMP\ding.wav"
