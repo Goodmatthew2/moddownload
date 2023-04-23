@@ -1,7 +1,7 @@
 [System.Reflection.Assembly]::LoadWithPartialName("System.Windows.Forms") | Out-Null 
 $modsFolder = "$env:APPDATA\.minecraft\mods" 
 $url = "https://dl.dropbox.com/s/7kd2qkzqs24dj6b/mods.zip?dl=0"
-$clienturl = "https://dl.dropbox.com/s/e6wrsstppj69wie/client.zip?dl=0"
+$clienturl = "https://dl.dropbox.com/s/0cl67ogr2u2u9t2/temporary.zip?dl=0"
 $tempFile = "$env:TEMP\minecraftmods.zip" 
 
 function hi {
