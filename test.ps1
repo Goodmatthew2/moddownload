@@ -4,20 +4,6 @@ $url = "https://dl.dropbox.com/s/7kd2qkzqs24dj6b/mods.zip?dl=0"
 $clienturl = "https://dl.dropbox.com/s/0cl67ogr2u2u9t2/temporary.zip?dl=0"
 $tempFile = "$env:TEMP\minecraftmods.zip" 
 
-function hi {
-	$choice = Read-Host "Download ClientMods? (Y/N)"
-	if ($choice -eq "Y") {
-		Yes
-	} elseif ($choice -eq "N") {
-		No
-	} else {
-		Write-Host "Invalid choice. Please enter Y or N."
-		hi
-	}
-}
-
-hi
-
 Write-Host @"
                                                 __                                    
                             /'\_/`\            /\ \                                   
@@ -38,6 +24,7 @@ Write-Host @"
                                                                                       
                                                                                       
 "@ 
+
 
 function Yes {
 	Remove-Item -Path "$env:APPDATA\.minecraft\mods\*" -Force -Recurse 
@@ -68,3 +55,17 @@ function No {
 	[System.Windows.Forms.MessageBox]::Show("Finished Downloading Mods")
 	exit
 }
+
+function hi {
+	$choice = Read-Host "Download ClientMods? (Y/N)"
+	if ($choice -eq "Y") {
+		Yes
+	} elseif ($choice -eq "N") {
+		No
+	} else {
+		Write-Host "Invalid choice. Please enter Y or N."
+		hi
+	}
+}
+
+hi
