@@ -1,6 +1,6 @@
 [System.Reflection.Assembly]::LoadWithPartialName("System.Windows.Forms") | Out-Null 
 $modsFolder = "$env:APPDATA\.minecraft\mods" 
-$url = "https://dl.dropbox.com/s/7kd2qkzqs24dj6b/mods.zip?dl=0"
+$url = "https://dl.dropbox.com/s/4f4zyx5a0apd3yk/plasmovoice-forge-1.19.4-2.0.3.zip?dl=0"
 $clienturl = "https://dl.dropbox.com/s/0cl67ogr2u2u9t2/temporary.zip?dl=0"
 $tempFile = "$env:TEMP\minecraftmods.zip" 
 
