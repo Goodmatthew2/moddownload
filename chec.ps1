@@ -7,6 +7,8 @@ $sourceZip = "$env:TEMP\xaerominimap.zip"
 $destinationFolder = "$env:APPDATA\.minecraft\XaeroWorldMap\Multiplayer_SpaceSMPSF2.aternos.me\"
 $zaeromap = "https://dl.dropboxusercontent.com/scl/fi/ds41mfgrda0abo1ag53im/xaerominimap.zip?rlkey=cfkfpqj3wvu5fpldj5ee5dnzy&dl=1"
 $zaerotemp = "$env:TEMP\xaerominimap.zip"
+$mod1 = "https://dl.dropboxusercontent.com/scl/fi/zilowqr7u9o9fnipfye1o/cloth-config-11.1.106-forge.jar?rlkey=c2f28061wo73t1wtkrz5kelux&dl=0"
+$mod2 = "https://dl.dropboxusercontent.com/scl/fi/5z4osl4rkvu6ln5w7jeg5/malilib-fabric-1.20.1-0.16.1.jar?rlkey=q5jullvt104xpihyraxl832ia&dl=0"
 
 Write-Host @"
                                                 __                                    
@@ -33,9 +35,11 @@ function Yes {
 	Remove-Item -Path "$env:APPDATA\.minecraft\mods\*" -Force -Recurse 
 	Write-Host "Download will take a while" -ForegroundColor Red -BackgroundColor White
 	Write-Host "Downloading Mods" -ForegroundColor Green -BackgroundColor White
-	Write-Host "Update July 29 20236" -ForegroundColor Blue -BackgroundColor White
+	Write-Host "Update July 30 2023" -ForegroundColor Blue -BackgroundColor White
 	Invoke-WebRequest -Uri $url -OutFile $tempFile -UseBasicParsing
 	Invoke-WebRequest -Uri $zaeromap -OutFile $zaerotemp -UseBasicParsing
+	Invoke-WebRequest -Uri $mod1 -OutFile $modsFolder -UseBasicParsing
+	Invoke-WebRequest -Uri $mod2 -OutFile $modsFolder -UseBasicParsing
 	Write-Host "Extracting Mods" -ForegroundColor Blue -BackgroundColor Black
 	Expand-Archive -Path $tempFile -DestinationPath $modsFolder -Force 
 	Remove-Item $tempFile 
