@@ -31,8 +31,12 @@ function Download-File ($url, $outputFile) {
 # Function to extract a zip file
 function Extract-ZipFile ($file) {
     try {
-        Add-Type -AssemblyName System.IO.Compression.FileSystem
-        [System.IO.Compression.ZipFile]::ExtractToDirectory($file, ".")
+        $destination = [System.IO.Path]::GetDirectoryName($file)
+        $entries = [System.IO.Compression.ZipFile]::OpenRead($file).Entries
+        foreach ($entry in $entries) {
+            $entryFullPath = [System.IO.Path]::Combine($destination, $entry.FullName)
+            $entry.ExtractToFile($entryFullPath, $true)  # Force overwrite
+        }
     } catch {
         return $_.Exception.Message
     }
