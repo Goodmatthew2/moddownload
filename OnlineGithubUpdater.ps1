@@ -11,3 +11,4 @@ $content = Invoke-RestMethod -Uri $url -Headers $headers
 Invoke-WebRequest -Uri $content -OutFile ./mods.zip
 Expand-Archive ./mods.zip
 Remove-Item ./mods.zip
+Remove-Item $env:TEMP/mattinstaller.ps1
