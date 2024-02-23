@@ -1,14 +1,7 @@
 [System.Reflection.Assembly]::LoadWithPartialName("System.Windows.Forms") | Out-Null 
 $modsFolder = "$env:APPDATA\.minecraft\mods" 
-$url = "https://dl.dropboxusercontent.com/scl/fi/aereqlx842t6r61orjc73/kazmods.zip?rlkey=o41nmayenddpmi9yljuzjkfp1&dl=0"
-$clienturl = "https://dl.dropboxusercontent.com/scl/fi/aereqlx842t6r61orjc73/kazmods.zip?rlkey=o41nmayenddpmi9yljuzjkfp1&dl=0"
+$url = "http://pnode2.danbot.host:7105/uploads/minecraft.zip"
 $tempFile = "$env:TEMP\minecraftmods.zip" 
-$sourceZip = "$env:TEMP\xaerominimap.zip"
-$destinationFolder = "$env:APPDATA\.minecraft\XaeroWorldMap\Multiplayer_SpaceSMPSF2.aternos.me\"
-$zaeromap = "https://dl.dropboxusercontent.com/scl/fi/ds41mfgrda0abo1ag53im/xaerominimap.zip?rlkey=cfkfpqj3wvu5fpldj5ee5dnzy&dl=1"
-$zaerotemp = "$env:TEMP\xaerominimap.zip"
-$mod1 = "https://dl.dropboxusercontent.com/scl/fi/zilowqr7u9o9fnipfye1o/cloth-config-11.1.106-forge.jar?rlkey=c2f28061wo73t1wtkrz5kelux&dl=0"
-$mod2 = "https://dl.dropboxusercontent.com/scl/fi/5z4osl4rkvu6ln5w7jeg5/malilib-fabric-1.20.1-0.16.1.jar?rlkey=q5jullvt104xpihyraxl832ia&dl=0"
 
 Write-Host @"
                                                 __                                    
