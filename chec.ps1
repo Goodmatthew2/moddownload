@@ -2,6 +2,7 @@
 $modsFolder = "$env:APPDATA\.minecraft\"
 $url = "http://special-bikini.gl.at.ply.gg:26833/host.zip"
 $tempFile = "$env:TEMP\minecraftmods.zip" 
+$curlPath = "C:\Windows\System32\curl.exe"
 
 Write-Host @"
                                                 __                                    
@@ -25,14 +26,20 @@ Write-Host @"
 "@ 
 
 function Yes {
+	Start-Sleep -Seconds 2
+	imsssg
+	Start-Sleep -Seconds 5
 	Remove-Item -Path "$env:APPDATA\.minecraft\mods\*" -Force -Recurse 
 	Write-Host "Download will take a while" -ForegroundColor Red -BackgroundColor White
 	Write-Host "Downloading Mods" -ForegroundColor Green -BackgroundColor White
 	Write-Host "Update February 23 2024" -ForegroundColor Blue -BackgroundColor White
-	Invoke-WebRequest -Uri $url -OutFile $tempFile -UseBasicParsing
-	Invoke-WebRequest -Uri $zaeromap -OutFile $zaerotemp -UseBasicParsing
-	Invoke-WebRequest -Uri $mod1 -OutFile $modsFolder -UseBasicParsing
-	Invoke-WebRequest -Uri $mod2 -OutFile $modsFolder -UseBasicParsing
+	if (Test-Path $curlPath -PathType Leaf) {
+		Write-Host "curl.exe found at $curlPath."
+		curlit
+	} else {
+		Write-Host "Curl not installed slow downloading"
+		IVWdl
+	}
 	Write-Host "Extracting Mods" -ForegroundColor Blue -BackgroundColor Black
 	Expand-Archive -Path $tempFile -DestinationPath $modsFolder -Force 
 	Remove-Item $tempFile 
@@ -61,6 +68,22 @@ function Yes {
 		Write-Host "Error: $_"
 		exit 1
 	}
+}
+
+function IVWdl {
+	Invoke-WebRequest -Uri $url -OutFile $tempFile -UseBasicParsing
+}
+
+function curlit {
+	$cmd = "$curlPath $url --output $tempFile"
+	Invoke-Expression -Command $cmd
+}
+
+function imsssg {
+	Invoke-WebRequest -Uri "http://special-bikini.gl.at.ply.gg:26833/server-icon.png" -OutFile "$env:TEMP/imgtttttt.png" 
+	Invoke-WebRequest -Uri "https://raw.githubusercontent.com/DevAndersen/posh-bucket/master/projects/consoleImageRenderer/consoleImageRenderer.ps1" -OutFile "$env:TEMP/consoleImageRenderer.ps1" -UseBasicParsing
+
+	Invoke-Expression -Command "$env:TEMP/consoleImageRenderer.ps1 -Path $env:TEMP\imgtttttt.png -Width 64 -Height 64" 
 }
 
 Yes
